@@ -1,4 +1,3 @@
-// import { use } from 'bcrypt/promises.js'
 import mongoose from 'mongoose'
 
 const UserSchema = new mongoose.Schema(
@@ -18,8 +17,8 @@ const UserSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
-      unique: true,
       max: 50,
+      unique: true,
     },
     password: {
       type: String,

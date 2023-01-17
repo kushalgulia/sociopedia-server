@@ -4,11 +4,11 @@ import { verifyToken } from '../middleware/auth.js'
 
 const router = express.Router()
 
-/* Read */
-router.get('/', verifyToken, getFeedPosts) //sending all the posts
-router.get('/:userId/posts', verifyToken, getUserPosts) //sending all the user posts
+/* READ */
+router.get('/', verifyToken, getFeedPosts)
+router.get('/:userId/posts', verifyToken, getUserPosts)
 
-/* Update */
-router.patch('/:id/like', verifyToken, likePost) // liking and unliking posts
+/* UPDATE */
+router.patch('/:id/like', verifyToken, likePost)
 
 export default router
